@@ -1,0 +1,5 @@
+test_app.exe: c.cc libb.dll
+        g++ -o $@ $^ -lb -L.
+
+libb.dll: a.h b.cc
+        g++ -o $@ -fPIC -shared b.cc
